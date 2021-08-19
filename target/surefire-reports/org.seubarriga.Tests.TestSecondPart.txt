@@ -1,0 +1,49 @@
+-------------------------------------------------------------------------------
+Test set: org.seubarriga.Tests.TestSecondPart
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.261 s <<< FAILURE! - in org.seubarriga.Tests.TestSecondPart
+validateTheErrorsMandatoryMessageOfFilds(org.seubarriga.Tests.TestSecondPart)  Time elapsed: 5.521 s  <<< ERROR!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=92.0.4515.159)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SOFTNOTE9QRVD53', ip: '192.168.0.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}), userDataDir=C:\Users\VINICI~1.SAN\AppData\Local\Temp\scoped_dir15220_437119016}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56430}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=92.0.4515.159, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 0c0a862392771ce085cfe5c05793a621
+	at org.seubarriga.Tests.TestSecondPart.validateTheErrorsMandatoryMessageOfFilds(TestSecondPart.java:58)
+
+validateTheMessageWhenFinancialMovementIsCreatedSuccessfully(org.seubarriga.Tests.TestSecondPart)  Time elapsed: 6.347 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+unknown error: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SOFTNOTE9QRVD53', ip: '192.168.0.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x007B2A33+2501171]
+	Ordinal0 [0x0074D1C1+2085313]
+	Ordinal0 [0x00651FA8+1056680]
+	Ordinal0 [0x0066D07C+1167484]
+	Ordinal0 [0x0066997F+1153407]
+	Ordinal0 [0x0069999F+1350047]
+	Ordinal0 [0x0069960A+1349130]
+	Ordinal0 [0x0069551B+1332507]
+	Ordinal0 [0x00671D74+1187188]
+	Ordinal0 [0x00672BD9+1190873]
+	GetHandleVerifier [0x0092EFE6+1504438]
+	GetHandleVerifier [0x009DDDA5+2220661]
+	GetHandleVerifier [0x00835589+481881]
+	GetHandleVerifier [0x00834639+477961]
+	Ordinal0 [0x007528BD+2107581]
+	Ordinal0 [0x00756728+2123560]
+	Ordinal0 [0x00756862+2123874]
+	Ordinal0 [0x0075FA81+2161281]
+	BaseThreadInitThunk [0x7596FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x771C7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x771C7A4E+238]
+
+	at org.seubarriga.Tests.TestSecondPart.setupTest(TestSecondPart.java:31)
+

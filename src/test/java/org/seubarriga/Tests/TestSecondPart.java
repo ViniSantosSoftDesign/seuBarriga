@@ -48,7 +48,7 @@ public class TestSecondPart {
         driver.findElement(By.linkText("Criar Movimentação")).click();
         driver.findElement(By.className("btn-primary")).submit();
         List<WebElement> erros = driver.findElements((By.xpath("//div[@class='alert alert-danger']//li")));
-        //List<String> retorno = new ArrayList<String>();
+
         String stringToCompare = "Data da Movimentação é obrigatório" +
                 "Data do pagamento é obrigatório" + "Descrição é obrigatório" +
                 "Interessado é obrigatório" + "Valor é obrigatório" + "Valor deve ser um número";

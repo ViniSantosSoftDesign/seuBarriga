@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.seubarriga.Tests.TestSecondPart" time="21.261" tests="4" errors="2" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\projetos\seuBarriga\target\test-classes;C:\projetos\seuBarriga\target\classes;C:\Users\vinicius.santos\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\vinicius.santos\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.4.0\selenium-chrome-driver-3.4.0.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-api\3.4.0\selenium-api-3.4.0.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.4.0\selenium-remote-driver-3.4.0.jar;C:\Users\vinicius.santos\.m2\repository\cglib\cglib-nodep\3.2.4\cglib-nodep-3.2.4.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\vinicius.santos\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\vinicius.santos\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\vinicius.santos\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;C:\Users\vinicius.santos\.m2\repository\com\google\guava\guava\21.0\guava-21.0.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\vinicius.santos\.m2\repository\net\java\dev\jna\jna\4.1.0\jna-4.1.0.jar;C:\Users\vinicius.santos\.m2\repository\net\java\dev\jna\jna-platform\4.1.0\jna-platform-4.1.0.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\vinicius.santos\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\vinicius.santos\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\vinicius.santos\.m2\repository\io\github\bonigarcia\webdrivermanager\4.4.3\webdrivermanager-4.4.3.jar;C:\Users\vinicius.santos\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\vinicius.santos\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.2\httpcore5-h2-5.0.2.jar;C:\Users\vinicius.santos\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\vinicius.santos\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\1.5.10.RELEASE\spring-boot-test-autoconfigure-1.5.10.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\boot\spring-boot-test\1.5.10.RELEASE\spring-boot-test-1.5.10.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\boot\spring-boot\1.5.10.RELEASE\spring-boot-1.5.10.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-core\4.3.14.RELEASE\spring-core-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-context\4.3.14.RELEASE\spring-context-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-aop\4.3.14.RELEASE\spring-aop-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-beans\4.3.14.RELEASE\spring-beans-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-expression\4.3.14.RELEASE\spring-expression-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\1.5.10.RELEASE\spring-boot-autoconfigure-1.5.10.RELEASE.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.12\bin"/>
+    <property name="sun.java.command" value="C:\Users\VINICI~1.SAN\AppData\Local\Temp\surefire14197147381308969151\surefirebooter142530238914181718.jar C:\Users\vinicius.santos\AppData\Local\Temp\surefire14197147381308969151 2021-08-19T17-46-44_791-jvmRun1 surefire978956613121079153tmp surefire_02877350593354437365tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\projetos\seuBarriga\target\test-classes;C:\projetos\seuBarriga\target\classes;C:\Users\vinicius.santos\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\vinicius.santos\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.4.0\selenium-chrome-driver-3.4.0.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-api\3.4.0\selenium-api-3.4.0.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.4.0\selenium-remote-driver-3.4.0.jar;C:\Users\vinicius.santos\.m2\repository\cglib\cglib-nodep\3.2.4\cglib-nodep-3.2.4.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\vinicius.santos\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\vinicius.santos\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\vinicius.santos\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;C:\Users\vinicius.santos\.m2\repository\com\google\guava\guava\21.0\guava-21.0.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\vinicius.santos\.m2\repository\net\java\dev\jna\jna\4.1.0\jna-4.1.0.jar;C:\Users\vinicius.santos\.m2\repository\net\java\dev\jna\jna-platform\4.1.0\jna-platform-4.1.0.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\vinicius.santos\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\vinicius.santos\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\vinicius.santos\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\vinicius.santos\.m2\repository\io\github\bonigarcia\webdrivermanager\4.4.3\webdrivermanager-4.4.3.jar;C:\Users\vinicius.santos\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\vinicius.santos\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.2\httpcore5-h2-5.0.2.jar;C:\Users\vinicius.santos\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\vinicius.santos\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\vinicius.santos\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\1.5.10.RELEASE\spring-boot-test-autoconfigure-1.5.10.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\boot\spring-boot-test\1.5.10.RELEASE\spring-boot-test-1.5.10.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\boot\spring-boot\1.5.10.RELEASE\spring-boot-1.5.10.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-core\4.3.14.RELEASE\spring-core-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-context\4.3.14.RELEASE\spring-context-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-aop\4.3.14.RELEASE\spring-aop-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-beans\4.3.14.RELEASE\spring-beans-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\spring-expression\4.3.14.RELEASE\spring-expression-4.3.14.RELEASE.jar;C:\Users\vinicius.santos\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\1.5.10.RELEASE\spring-boot-autoconfigure-1.5.10.RELEASE.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\vinicius.santos"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-07-20"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-11.0.12"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\projetos\seuBarriga"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\VINICI~1.SAN\AppData\Local\Temp\surefire14197147381308969151\surefirebooter142530238914181718.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.12+8-LTS-237"/>
+    <property name="user.name" value="vinicius.santos"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\vinicius.santos\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\VINICI~1.SAN\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.12"/>
+    <property name="user.dir" value="C:\projetos\seuBarriga"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.12\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Java\jdk-11.0.12\bin;C:\Program Files\Java\apache-maven-3.8.1\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\scripts;C:\Users\vinicius.santos\AppData\Local\Microsoft\WindowsApps;C:\Users\vinicius.santos\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\vinicius.santos\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.3\bin;;C:\Users\vinicius.santos\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.12+8-LTS-237"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="validateIfTheFinancialMovementeIsShownAtMonthlyFinancialSummary" classname="org.seubarriga.Tests.TestSecondPart" time="5.394"/>
+  <testcase name="validateTheErrorsMandatoryMessageOfFilds" classname="org.seubarriga.Tests.TestSecondPart" time="5.521">
+    <error message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=92.0.4515.159)&#10;Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;&#10;System info: host: &apos;SOFTNOTE9QRVD53&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}), userDataDir=C:\Users\VINICI~1.SAN\AppData\Local\Temp\scoped_dir15220_437119016}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56430}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=92.0.4515.159, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]&#10;Session ID: 0c0a862392771ce085cfe5c05793a621" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=92.0.4515.159)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SOFTNOTE9QRVD53', ip: '192.168.0.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}), userDataDir=C:\Users\VINICI~1.SAN\AppData\Local\Temp\scoped_dir15220_437119016}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56430}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=92.0.4515.159, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 0c0a862392771ce085cfe5c05793a621
+	at org.seubarriga.Tests.TestSecondPart.validateTheErrorsMandatoryMessageOfFilds(TestSecondPart.java:58)
+</error>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 37059
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+ago 19, 2021 5:47:23 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ago 19, 2021 5:47:27 PM org.openqa.selenium.remote.ErrorCodes toStatus
+INFO: HTTP Status: '404' -> incorrect JSON status mapping for 'no such window' (400 expected)
+]]></system-err>
+  </testcase>
+  <testcase name="validateTheMessageWhenFinancialMovementIsCreatedSuccessfully" classname="org.seubarriga.Tests.TestSecondPart" time="6.347">
+    <error message="unknown error: Chrome failed to start: exited normally.&#10;  (chrome not reachable)&#10;  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;&#10;System info: host: &apos;SOFTNOTE9QRVD53&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;&#10;Driver info: driver.version: ChromeDriver&#10;remote stacktrace: Backtrace:&#10;	Ordinal0 [0x007B2A33+2501171]&#10;	Ordinal0 [0x0074D1C1+2085313]&#10;	Ordinal0 [0x00651FA8+1056680]&#10;	Ordinal0 [0x0066D07C+1167484]&#10;	Ordinal0 [0x0066997F+1153407]&#10;	Ordinal0 [0x0069999F+1350047]&#10;	Ordinal0 [0x0069960A+1349130]&#10;	Ordinal0 [0x0069551B+1332507]&#10;	Ordinal0 [0x00671D74+1187188]&#10;	Ordinal0 [0x00672BD9+1190873]&#10;	GetHandleVerifier [0x0092EFE6+1504438]&#10;	GetHandleVerifier [0x009DDDA5+2220661]&#10;	GetHandleVerifier [0x00835589+481881]&#10;	GetHandleVerifier [0x00834639+477961]&#10;	Ordinal0 [0x007528BD+2107581]&#10;	Ordinal0 [0x00756728+2123560]&#10;	Ordinal0 [0x00756862+2123874]&#10;	Ordinal0 [0x0075FA81+2161281]&#10;	BaseThreadInitThunk [0x7596FA29+25]&#10;	RtlGetAppContainerNamedObjectPath [0x771C7A7E+286]&#10;	RtlGetAppContainerNamedObjectPath [0x771C7A4E+238]&#10;" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+unknown error: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SOFTNOTE9QRVD53', ip: '192.168.0.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x007B2A33+2501171]
+	Ordinal0 [0x0074D1C1+2085313]
+	Ordinal0 [0x00651FA8+1056680]
+	Ordinal0 [0x0066D07C+1167484]
+	Ordinal0 [0x0066997F+1153407]
+	Ordinal0 [0x0069999F+1350047]
+	Ordinal0 [0x0069960A+1349130]
+	Ordinal0 [0x0069551B+1332507]
+	Ordinal0 [0x00671D74+1187188]
+	Ordinal0 [0x00672BD9+1190873]
+	GetHandleVerifier [0x0092EFE6+1504438]
+	GetHandleVerifier [0x009DDDA5+2220661]
+	GetHandleVerifier [0x00835589+481881]
+	GetHandleVerifier [0x00834639+477961]
+	Ordinal0 [0x007528BD+2107581]
+	Ordinal0 [0x00756728+2123560]
+	Ordinal0 [0x00756862+2123874]
+	Ordinal0 [0x0075FA81+2161281]
+	BaseThreadInitThunk [0x7596FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x771C7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x771C7A4E+238]
+
+	at org.seubarriga.Tests.TestSecondPart.setupTest(TestSecondPart.java:31)
+</error>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 36019
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+]]></system-err>
+  </testcase>
+  <testcase name="validateTheErrorMessageOfValueFieldMustBeOnlyNumbers" classname="org.seubarriga.Tests.TestSecondPart" time="3.996"/>
+</testsuite>
