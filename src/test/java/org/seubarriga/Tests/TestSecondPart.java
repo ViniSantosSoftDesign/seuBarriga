@@ -30,7 +30,7 @@ public class TestSecondPart {
     public void setupTest() {
         driver = new ChromeDriver();
         driver.get("https://seubarriga.wcaquino.me");
-        driver.findElement(By.id("email")).sendKeys("aguia@aguia.com.br");
+        driver.findElement(By.id("email")).sendKeys("aguia1@aguia.com.br");
         driver.findElement(By.id("senha")).sendKeys("32690305");
         driver.findElement(By.className("btn-primary")).submit();
     }

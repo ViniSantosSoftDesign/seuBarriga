@@ -36,7 +36,7 @@ public class TestFirstPart {
         driver.get("https://seubarriga.wcaquino.me");
         driver.findElement(By.className("dropdown-toggle")).click();
         driver.findElement(By.linkText("Adicionar")).click();
-        driver.findElement(By.id("nome")).sendKeys("3");
+        driver.findElement(By.id("nome")).sendKeys("99999");
         driver.findElement(By.className("btn-primary")).submit();
         Assert.assertEquals("Conta adicionada com sucesso!", driver.findElement(By.className("alert-success")).getText());
     }
@@ -49,7 +49,6 @@ public class TestFirstPart {
         driver.findElement(By.className("btn-primary")).submit();
         Assert.assertEquals("Informe o nome da conta", driver.findElement(By.className("alert-danger")).getText());
     }
-
 
     @Test
     public void mustShowAllAccountsOnTheSystem() {
