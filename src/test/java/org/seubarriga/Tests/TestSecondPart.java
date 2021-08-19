@@ -60,7 +60,36 @@ public class TestSecondPart {
 
         }
 
+    }
 
+    @Test
+    public void validateTheErrorMessageOfValueFieldMustBeOnlyNumbers() {
+        driver.get("https://seubarriga.wcaquino.me");
+        driver.findElement(By.linkText("Criar Movimentação")).click();
+
+        driver.findElement(By.id("data_transacao")).sendKeys("19/08/1988");
+        driver.findElement(By.id("data_pagamento")).sendKeys("19/08/2101");
+        driver.findElement(By.id("descricao")).sendKeys("Aluguel super atrasado");
+        driver.findElement(By.id("interessado")).sendKeys("Herdeiro do Madruga");
+        driver.findElement(By.id("valor")).sendKeys("NuncaPagarei");
+        //driver.findElement(By.id("")).sendKeys("");
+
+        driver.findElement(By.className("btn-primary")).submit();
+        Assert.assertEquals("Valor deve ser um número", driver.findElement(By.className("alert-danger")).getText());
+
+    }
+    @Test
+    public void validateTheMessageWhenFinancialMovementIsCreatedSuccessfully() {
+        driver.get("https://seubarriga.wcaquino.me");
+        driver.findElement(By.linkText("Criar Movimentação")).click();
+
+        driver.findElement(By.id("data_transacao")).sendKeys("19/08/2021");
+        driver.findElement(By.id("data_pagamento")).sendKeys("25/08/2021");
+        driver.findElement(By.id("descricao")).sendKeys("Aluguel super atrasado");
+        driver.findElement(By.id("interessado")).sendKeys("Herdeiro do Madruga");
+        driver.findElement(By.id("valor")).sendKeys("1.99");
+        driver.findElement(By.className("btn-primary")).submit();
+        Assert.assertEquals("Movimentação adicionada com sucesso!", driver.findElement(By.className("alert-success")).getText());
     }
 
 
