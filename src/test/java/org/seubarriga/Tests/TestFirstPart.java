@@ -19,26 +19,17 @@ public class TestFirstPart {
     public void setupTest() {
         driver = new ChromeDriver();
         driver.get("https://seubarriga.wcaquino.me");
-        driver.findElement(By.id("email")).sendKeys("aguia@aguia.com.br");
+        driver.findElement(By.id("email")).sendKeys("aguia1@aguia.com.br");
         driver.findElement(By.id("senha")).sendKeys("32690305");
         driver.findElement(By.className("btn-primary")).submit();
     }
 
- /*   @After
-    public void teardown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }*/
-
-    @Test
-    public void validateTheErrorMessageReturnedWhenCreateAnAccountWithoutPutName() {
-        driver.get("https://seubarriga.wcaquino.me");
-        driver.findElement(By.className("dropdown-toggle")).click();
-        driver.findElement(By.linkText("Adicionar")).click();
-        driver.findElement(By.className("btn-primary")).submit();
-        Assert.assertEquals("Informe o nome da conta", driver.findElement(By.className("alert-danger")).getText());
-    }
+    /*   @After
+       public void teardown() {
+           if (driver != null) {
+               driver.quit();
+           }
+       }*/
 
     @Test
     public void validateMessageReturnedWhenCreateAnAccountSuccessfully() {
@@ -49,6 +40,16 @@ public class TestFirstPart {
         driver.findElement(By.className("btn-primary")).submit();
         Assert.assertEquals("Conta adicionada com sucesso!", driver.findElement(By.className("alert-success")).getText());
     }
+
+    @Test
+    public void validateTheErrorMessageReturnedWhenCreateAnAccountWithoutPutName() {
+        driver.get("https://seubarriga.wcaquino.me");
+        driver.findElement(By.className("dropdown-toggle")).click();
+        driver.findElement(By.linkText("Adicionar")).click();
+        driver.findElement(By.className("btn-primary")).submit();
+        Assert.assertEquals("Informe o nome da conta", driver.findElement(By.className("alert-danger")).getText());
+    }
+
 
     @Test
     public void mustShowAllAccountsOnTheSystem() {
@@ -76,7 +77,6 @@ public class TestFirstPart {
         driver.findElement(By.linkText("Listar")).click();
         driver.findElement(By.xpath("//*[@id=\"tabelaContas\"]/tbody/tr[1]/td[2]/a[2]/span[@class='glyphicon glyphicon-remove-circle']")).click();
         Assert.assertEquals("Conta removida com sucesso!", driver.findElement(By.className("alert-success")).getText());
-        driver.findElement(By.cssSelector("Listar")).click();
     }
 
 

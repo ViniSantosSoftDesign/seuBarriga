@@ -96,7 +96,7 @@ public class TestSecondPart {
     @Test
     public void validateIfTheFinancialMovementeIsShownAtMonthlyFinancialSummary() {
         String description = "Sim Eu sou uma movimentação e fui cadastrada!";
-        String everything ="";
+        String everything = "";
 
         driver.get("https://seubarriga.wcaquino.me");
         driver.findElement(By.linkText("Criar Movimentação")).click();
@@ -117,6 +117,4 @@ public class TestSecondPart {
         }
         Assert.assertThat(everything, containsString(description));
     }
-
-
 }
