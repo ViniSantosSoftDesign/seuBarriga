@@ -76,6 +76,8 @@ public class TestFirstPart {
         driver.findElement(By.linkText("Listar")).click();
         driver.findElement(By.xpath("//*[@id=\"tabelaContas\"]/tbody/tr[1]/td[2]/a[2]/span[@class='glyphicon glyphicon-remove-circle']")).click();
         Assert.assertEquals("Conta removida com sucesso!", driver.findElement(By.className("alert-success")).getText());
+        driver.findElement(By.cssSelector("Listar")).click();
     }
+
 
 }
