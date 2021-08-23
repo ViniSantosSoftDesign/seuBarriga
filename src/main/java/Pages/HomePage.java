@@ -16,26 +16,27 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public void clickAccountsDropDownButton(){
+    public void clickOnAccountsDropDownButton(){
         driver.findElement(dropDownAccountsBy).click();
     }
 
-    public AddAccountPage clickToAddButton(){
-        clickAccountsDropDownButton();
+    public AddAccountPage clickOnAddButton(){
+        clickOnAccountsDropDownButton();
         driver.findElement(addAccountButtonBy).click();
         return new AddAccountPage(driver);
     }
 
-    public AccountsList clickToShowListOfAccounts(){
-        clickAccountsDropDownButton();
+    public AccountsList clickOnShowListOfAccounts(){
+        clickOnAccountsDropDownButton();
         driver.findElement(showListOfAccountsBy).click();
         return new AccountsList(driver);
     }
-    public void clickToCreateFinancialMovement(){
+    public void clickOnCreateFinancialMovement(){
         driver.findElement(createFinancialMovementBy).click();
     }
 
-    public void clickToMonthlySummary(){
+    public BankStatementPage clickOnMonthlySummary(){
         driver.findElement(monthlySummaryBy).click();
+        return new BankStatementPage(driver);
     }
 }

@@ -14,13 +14,18 @@ public class TestFirstPart extends BaseTest {
     private WebDriver driver;
 
     @Test
-    public void validateMessageReturnedWhenCreateAnAccountSuccessfully(WebDriver driver) {
+    public void validateMessageReturnedWhenCreateAnAccountSuccessfully() {
 
+        homePage.clickOnAccountsDropDownButton();
+        homePage.clickOnAddButton();
+        /*
         driver.findElement(By.className("dropdown-toggle")).click();
         driver.findElement(By.linkText("Adicionar")).click();
+
         driver.findElement(By.id("nome")).sendKeys("99999");
         driver.findElement(By.className("btn-primary")).submit();
         Assert.assertEquals("Conta adicionada com sucesso!", driver.findElement(By.className("alert-success")).getText());
+        */
     }
 
     @Test
