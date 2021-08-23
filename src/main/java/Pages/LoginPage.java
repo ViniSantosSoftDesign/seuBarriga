@@ -18,12 +18,12 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    public void writeEmailInTheField(String userEmail) {
+    public void setUserEmail(String userEmail) {
         driver.findElement(emailBy).sendKeys(userEmail);
 
     }
 
-    public void writePasswordInTheField(String userPassword) {
+    public void setUserPassword(String userPassword) {
         driver.findElement(passwordBy).sendKeys(userPassword);
     }
 
@@ -33,18 +33,9 @@ public class LoginPage {
     }
 
     public HomePage loginValidUser(String userEmail, String userPassword) {
-        writeEmailInTheField(userEmail);
-        writePasswordInTheField(userPassword);
+        setUserEmail(userEmail);
+        setUserPassword(userPassword);
         return new HomePage(driver);
 
-    }
-
-
-    public void setupTest() {
-        driver = new ChromeDriver();
-        driver.get("https://seubarriga.wcaquino.me");
-        driver.findElement(By.id("email")).sendKeys("aguia1@aguia.com.br");
-        driver.findElement(By.id("senha")).sendKeys("32690305");
-        driver.findElement(By.className("btn-primary")).submit();
     }
 }
