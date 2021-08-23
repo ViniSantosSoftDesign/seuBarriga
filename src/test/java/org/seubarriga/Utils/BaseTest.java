@@ -15,6 +15,7 @@ public class BaseTest {
 
     protected LoginPage loginPage;
     protected HomePage homePage;
+    protected AddAccountPage AddAccountPage;
 
     protected AddAccountPage accountPage;
 
@@ -29,6 +30,7 @@ public class BaseTest {
         driver.get("https://seubarriga.wcaquino.me");
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
+        accountPage = new AddAccountPage(driver);
 
         loginPage.setUserEmail("aguia1@aguia.com.br");
         loginPage.setUserPassword("32690305");

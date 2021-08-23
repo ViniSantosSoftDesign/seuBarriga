@@ -15,12 +15,8 @@ public class TestFirstPart extends BaseTest {
 
     @Test
     public void validateMessageReturnedWhenCreateAnAccountSuccessfully() {
-
         homePage.clickOnAccountsDropDownButton();
         homePage.clickOnAddButton();
-        /*
-        driver.findElement(By.className("dropdown-toggle")).click();
-        driver.findElement(By.linkText("Adicionar")).click();
 
         driver.findElement(By.id("nome")).sendKeys("99999");
         driver.findElement(By.className("btn-primary")).submit();
