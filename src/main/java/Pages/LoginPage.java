@@ -27,12 +27,12 @@ public class LoginPage {
         driver.findElement(passwordBy).sendKeys(userPassword);
     }
 
-    public HomePage clickLoginButton() {
+    public HomePage clickLoginButtonReturnsHomePageObject() {
         driver.findElement(loginButtonBy).click();
         return new HomePage(driver);
     }
 
-    public HomePage loginValidUser(String userEmail, String userPassword) {
+    public HomePage loginValidUserReturnsHomePageObject(String userEmail, String userPassword) {
         setUserEmail(userEmail);
         setUserPassword(userPassword);
         return new HomePage(driver);

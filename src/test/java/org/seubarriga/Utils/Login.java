@@ -5,11 +5,12 @@ import org.junit.Test;
 
 public class Login extends BaseTest {
 
-    public HomePage justLogin() {
+    public HomePage loggingIntoTheSystem() {
         loginPage.setUserEmail("aguia1@aguia.com.br");
         loginPage.setUserPassword("32690305");
-        
-        return loginPage.clickLoginButton();
+
+        return loginPage.clickLoginButtonReturnsHomePageObject();
 
     }
+    //loginPage = new LoginPage(driver);
 }
