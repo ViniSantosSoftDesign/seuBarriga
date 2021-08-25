@@ -9,4 +9,6 @@ public class EditAccountPage {
     //We put By in the end of a variable to be ease to track the tipy of it.
     protected By nameBy = By.id("nome");
     protected By saveButtonBy = By.className("btn-primary");
+    protected By alertDangerBy = By.className("alert-danger");
+    protected By alertSuccessBy = By.className("alert-success");
 }

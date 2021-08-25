@@ -27,24 +27,19 @@ public class TestFirstPart extends BaseTest {
 
     @Test
     public void validateMessageReturnedWhenChangeTheNameOfAnAccountSuccessfully() {
-
-       /* accountList = homePage.clickOnShowListOfAccounts();
-
-        driver.findElement(By.xpath("//*[@id=\"tabelaContas\"]/tbody/tr[1]/td[2]/a[1]/span[@class='glyphicon glyphicon-edit']")).click();
-        driver.findElement(By.id("nome")).clear();
-        driver.findElement(By.id("nome")).sendKeys("ALTERADO");
-        driver.findElement(By.className("btn-primary")).submit();*/
-        changeAnAccountName("ALTERADO");
+        changeAnAccountName("ALTERADO1");
         Assert.assertEquals("Conta alterada com sucesso!", driver.findElement(By.className("alert-success")).getText());
     }
 
     @Test
     public void validateMessageReturnedWhenDeleteAnAccountSuccessfully() {
-        driver.get("https://seubarriga.wcaquino.me");
+        /*driver.get("https://seubarriga.wcaquino.me");
         driver.findElement(By.className("dropdown-toggle")).click();
         driver.findElement(By.linkText("Listar")).click();
         driver.findElement(By.xpath("//*[@id=\"tabelaContas\"]/tbody/tr[1]/td[2]/a[2]/span[@class='glyphicon glyphicon-remove-circle']")).click();
-        Assert.assertEquals("Conta removida com sucesso!", driver.findElement(By.className("alert-success")).getText());
+*/
+        deleteAnAccount();
+        Assert.assertEquals("Conta removida com sucesso!", accountList.getTextReturnedOnAlertSuccess());
     }
 
 

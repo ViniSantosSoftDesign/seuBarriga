@@ -9,10 +9,21 @@ public class AccountsListInteraction extends AccountsListPage {
         this.driver = driver;
     }
 
-    public EditAccountPageInteraction clickOnEditButton(){
+    public EditAccountPageInteraction clickOnEditButton() {
         driver.findElement(editButton).click();
         return new EditAccountPageInteraction(driver);
     }
 
+    public void clickOnDeleteButton() {
+        driver.findElement(deleteButtonFirstAccountOnTheListBy).click();
+    }
+
+    public String getTextReturnedOnAlertDanger() {
+        return driver.findElement(alertDangerBy).getText();
+    }
+
+    public String getTextReturnedOnAlertSuccess() {
+        return driver.findElement(alertSuccessBy).getText();
+    }
 
 }

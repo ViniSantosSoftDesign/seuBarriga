@@ -17,6 +17,7 @@ public class BaseTest {
     protected AddAccountPageInteraction accountPage;
     protected AccountsListInteraction accountList;
     protected EditAccountPageInteraction editAccount;
+    protected CreateFinancialMovementPageInteraction createFinancialPage;
 
     @BeforeClass
     public static void setupClass() {
@@ -32,6 +33,7 @@ public class BaseTest {
         accountPage = new AddAccountPageInteraction(driver);
         accountList = new AccountsListInteraction(driver);
         editAccount = new EditAccountPageInteraction(driver);
+        createFinancialPage = new CreateFinancialMovementPageInteraction(driver);
 
         loginPage.setUserEmail("aguia1@aguia.com.br");
         loginPage.setUserPassword("32690305");
@@ -49,11 +51,45 @@ public class BaseTest {
         accountPage.clickOnSaveButtonToSaveAnAccount();
     }
 
-    public void changeAnAccountName(String name){
+    public void changeAnAccountName(String name) {
         accountList = homePage.clickOnShowListOfAccounts();
         editAccount = accountList.clickOnEditButton();
         editAccount.clearName();
         editAccount.setName(name);
+        editAccount.clickOnSaveButton();
+    }
+
+    public void deleteAnAccount() {
+
+        accountList = homePage.clickOnShowListOfAccounts();
+        accountList.clickOnDeleteButton();
+    }
+
+    public void createFinancialMovementSendingForbiddenMonetaryValueType() {
+        createFinancialPage = homePage.clickOnCreateFinancialMovement();
+        createFinancialPage.setDataOFTransaction("25/08/2021");
+        createFinancialPage.setDataOFpayment("26/08/2021");
+        createFinancialPage.setDescription("Aluguel super atrasado");
+        createFinancialPage.setWhoWants("Herdeiro do Madruga");
+        createFinancialPage.setValue("NuncaPagarei");
+        createFinancialPage.clickOnSaveButtonToSaveAFinancialMovement();
+    }
+
+    public void createFinancialMovementCorrectly() {
+        createFinancialPage = homePage.clickOnCreateFinancialMovement();
+        createFinancialPage.setDataOFTransaction("25/08/2021");
+        createFinancialPage.setDataOFpayment("26/08/2021");
+        createFinancialPage.setDescription("Aluguel super atrasado");
+        createFinancialPage.setWhoWants("Herdeiro do Madruga");
+        createFinancialPage.setValue("1.99");
+        createFinancialPage.clickOnSaveButtonToSaveAFinancialMovement();
+    }
+
+
+
+    public void createFinancialMovementBlanc() {
+        createFinancialPage = homePage.clickOnCreateFinancialMovement();
+        createFinancialPage.clickOnSaveButtonToSaveAFinancialMovement();
     }
 
     /*   @After

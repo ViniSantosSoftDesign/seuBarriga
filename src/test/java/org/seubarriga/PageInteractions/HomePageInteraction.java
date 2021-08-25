@@ -24,8 +24,10 @@ public class HomePageInteraction extends HomePage {
         driver.findElement(showListOfAccountsBy).click();
         return new AccountsListInteraction(driver);
     }
-    public void clickOnCreateFinancialMovement(){
+
+    public CreateFinancialMovementPageInteraction clickOnCreateFinancialMovement(){
         driver.findElement(createFinancialMovementBy).click();
+        return new CreateFinancialMovementPageInteraction(driver);
     }
 
     public BankStatementPageInteraction clickOnMonthlySummary(){

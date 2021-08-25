@@ -1,48 +1,20 @@
 package org.seubarriga.Tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.seubarriga.Utils.BaseTest;
 
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.containsString;
 
-public class TestSecondPart {
-
-    private WebDriver driver;
-
-    @BeforeClass
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-    }
-
-    @Before
-    public void setupTest() {
-        driver = new ChromeDriver();
-        driver.get("https://seubarriga.wcaquino.me");
-        driver.findElement(By.id("email")).sendKeys("aguia1@aguia.com.br");
-        driver.findElement(By.id("senha")).sendKeys("32690305");
-        driver.findElement(By.className("btn-primary")).submit();
-    }
-
- /*   @After
-    public void teardown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }*/
+public class TestSecondPart extends BaseTest {
 
     @Test
     public void validateTheErrorsMandatoryMessageOfFilds() {
-        driver.get("https://seubarriga.wcaquino.me");
+
         driver.findElement(By.linkText("Criar Movimentação")).click();
         driver.findElement(By.className("btn-primary")).submit();
         List<WebElement> erros = driver.findElements((By.xpath("//div[@class='alert alert-danger']//li")));
@@ -62,24 +34,15 @@ public class TestSecondPart {
 
     @Test
     public void validateTheErrorMessageOfValueFieldMustBeOnlyNumbers() {
-        driver.get("https://seubarriga.wcaquino.me");
-        driver.findElement(By.linkText("Criar Movimentação")).click();
 
-        driver.findElement(By.id("data_transacao")).sendKeys("19/08/1988");
-        driver.findElement(By.id("data_pagamento")).sendKeys("19/08/2101");
-        driver.findElement(By.id("descricao")).sendKeys("Aluguel super atrasado");
-        driver.findElement(By.id("interessado")).sendKeys("Herdeiro do Madruga");
-        driver.findElement(By.id("valor")).sendKeys("NuncaPagarei");
-        //driver.findElement(By.id("")).sendKeys("");
-
-        driver.findElement(By.className("btn-primary")).submit();
-        Assert.assertEquals("Valor deve ser um número", driver.findElement(By.className("alert-danger")).getText());
+        createFinancialMovementSendingForbiddenMonetaryValueType();
+        Assert.assertEquals("Valor deve ser um número", createFinancialPage.getTextReturnedOnAlertDanger());
 
     }
 
     @Test
     public void validateTheMessageWhenFinancialMovementIsCreatedSuccessfully() {
-        driver.get("https://seubarriga.wcaquino.me");
+       /* driver.get("https://seubarriga.wcaquino.me");
         driver.findElement(By.linkText("Criar Movimentação")).click();
 
         driver.findElement(By.id("data_transacao")).sendKeys("19/08/2021");
@@ -87,8 +50,10 @@ public class TestSecondPart {
         driver.findElement(By.id("descricao")).sendKeys("Aluguel super atrasado");
         driver.findElement(By.id("interessado")).sendKeys("Herdeiro do Madruga");
         driver.findElement(By.id("valor")).sendKeys("1.99");
-        driver.findElement(By.className("btn-primary")).submit();
-        Assert.assertEquals("Movimentação adicionada com sucesso!", driver.findElement(By.className("alert-success")).getText());
+        driver.findElement(By.className("btn-primary")).submit();*/
+
+        createFinancialMovementCorrectly();
+        Assert.assertEquals("Movimentação adicionada com sucesso!", createFinancialPage.getTextReturnedOnAlertSuccess());
     }
 
     @Test
@@ -116,12 +81,4 @@ public class TestSecondPart {
         Assert.assertThat(everything, containsString(description));
     }
 
-    public static class LoginTests extends BaseTest {
-
-        @Test
-        public void successfulLogin() {
-
-
-        }
-    }
 }

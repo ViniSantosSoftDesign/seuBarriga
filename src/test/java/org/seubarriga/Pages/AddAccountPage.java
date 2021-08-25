@@ -10,4 +10,19 @@ public class AddAccountPage {
     protected By alertDangerBy = By.className("alert-danger");
     protected By alertSuccessBy = By.className("alert-success");
 
+    public void setName(String name) {
+        driver.findElement(nameBy).sendKeys(name);
+    }
+
+    public void clickOnSaveButtonToSaveAnAccount() {
+        driver.findElement(savaButtonBy).click();
+    }
+
+    public String getTextReturnedOnAlertDanger() {
+        return driver.findElement(alertDangerBy).getText();
+    }
+
+    public String getTextReturnedOnAlertSuccess() {
+        return driver.findElement(alertSuccessBy).getText();
+    }
 }

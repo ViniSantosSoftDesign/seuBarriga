@@ -15,6 +15,15 @@ public class EditAccountPageInteraction extends EditAccountPage {
     public void setName(String name){
         driver.findElement(nameBy).sendKeys(name);
     }
-    public void clickOnSaveButton()
+    public void clickOnSaveButton(){
+        driver.findElement(saveButtonBy).click();
+    }
+    public String getTextReturnedOnAlertDanger() {
+        return driver.findElement(alertDangerBy).getText();
+    }
+
+    public String getTextReturnedOnAlertSuccess() {
+        return driver.findElement(alertSuccessBy).getText();
+    }
 
 }
