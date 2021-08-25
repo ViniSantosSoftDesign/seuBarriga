@@ -2,23 +2,15 @@ package org.seubarriga.Tests;
 
 import org.junit.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import org.seubarriga.Utils.BaseTest;
 
 public class TestFirstPart extends BaseTest {
 
-    TestFirstPart test1 = new TestFirstPart();
-
-    private WebDriver driver;
-
     @Test
     public void validateMessageReturnedWhenCreateAnAccountSuccessfully() {
-        homePage.clickOnAccountsDropDownButton();
-        homePage.clickOnAddButton();
-        driver.findElement(By.id("nome")).sendKeys("99999");
-        driver.findElement(By.className("btn-primary")).submit();
-        Assert.assertEquals("Conta adicionada com sucesso!", driver.findElement(By.className("alert-success")).getText());
+        addAnAccountWithName("titia10");
+        Assert.assertEquals("Conta adicionada com sucesso!", accountPage.getTextReturnedOnAlertSuccess());
     }
 
     @Test
