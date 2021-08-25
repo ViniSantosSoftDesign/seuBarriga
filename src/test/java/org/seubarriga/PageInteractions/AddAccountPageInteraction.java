@@ -1,17 +1,12 @@
-package Pages;
+package org.seubarriga.PageInteractions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.seubarriga.Pages.AddAccountPage;
 
-public class AddAccountPage {
-    private WebDriver driver;
-    private By nameBy = By.id("nome");
-    private By savaButtonBy = By.className("btn-primary");
-    private By alertDangerBy = By.className("alert-danger");
-    private By alertSuccessBy = By.className("alert-success");
+public class AddAccountPageInteraction extends AddAccountPage {
 
-
-    public AddAccountPage(WebDriver driver) {
+    public AddAccountPageInteraction(WebDriver driver) {
         this.driver = driver;
     }
 

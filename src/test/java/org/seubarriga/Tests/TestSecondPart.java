@@ -1,18 +1,16 @@
 package org.seubarriga.Tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.hamcrest.Matcher;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.matchers.JUnitMatchers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.seubarriga.Utils.BaseTest;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.containsString;
@@ -116,5 +114,14 @@ public class TestSecondPart {
             everything = everything + element.getText();
         }
         Assert.assertThat(everything, containsString(description));
+    }
+
+    public static class LoginTests extends BaseTest {
+
+        @Test
+        public void successfulLogin() {
+
+
+        }
     }
 }

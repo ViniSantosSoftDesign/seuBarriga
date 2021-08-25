@@ -1,15 +1,14 @@
 package org.seubarriga.Tests;
 
-import Pages.HomePage;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.seubarriga.Utils.BaseTest;
 
 public class TestFirstPart extends BaseTest {
+
+    TestFirstPart test1 = new TestFirstPart();
 
     private WebDriver driver;
 
@@ -17,11 +16,9 @@ public class TestFirstPart extends BaseTest {
     public void validateMessageReturnedWhenCreateAnAccountSuccessfully() {
         homePage.clickOnAccountsDropDownButton();
         homePage.clickOnAddButton();
-
         driver.findElement(By.id("nome")).sendKeys("99999");
         driver.findElement(By.className("btn-primary")).submit();
         Assert.assertEquals("Conta adicionada com sucesso!", driver.findElement(By.className("alert-success")).getText());
-        */
     }
 
     @Test

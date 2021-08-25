@@ -1,7 +1,6 @@
 package org.seubarriga.Utils;
 
-import Pages.HomePage;
-import org.junit.Test;
+import org.seubarriga.Pages.HomePage;
 
 public class Login extends BaseTest {
 
