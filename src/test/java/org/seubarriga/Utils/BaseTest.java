@@ -85,6 +85,30 @@ public class BaseTest {
         createFinancialPage.clickOnSaveButtonToSaveAFinancialMovement();
     }
 
+    public String createStringToCompareErroMessages(){
+        String stringToCompare = "Data da Movimentação é obrigatório" +
+                "Data do pagamento é obrigatório" + "Descrição é obrigatório" +
+                "Interessado é obrigatório" + "Valor é obrigatório" + "Valor deve ser um número";
+
+        return stringToCompare;
+    }
+
+    public String createFinancialMovementToValidadeIfItShowUpAtAtMonthlyFinancialSummary(String ) {
+
+        String description = "Sim Eu sou uma movimentação e fui cadastrada!";
+        String everything = "";
+
+        createFinancialPage = homePage.clickOnCreateFinancialMovement();
+        createFinancialPage.setDataOFTransaction("25/08/2021");
+        createFinancialPage.setDataOFpayment("26/08/2021");
+        createFinancialPage.setDescription(description);
+        createFinancialPage.setWhoWants("Herdeiro do Madruga");
+        createFinancialPage.setValue("1.99");
+        createFinancialPage.clickOnSaveButtonToSaveAFinancialMovement();
+
+        return description;
+    }
+
 
 
     public void createFinancialMovementBlanc() {
