@@ -15,29 +15,26 @@ public class TestFirstPart extends BaseTest {
 
     @Test
     public void validateTheErrorMessageReturnedWhenCreateAnAccountWithoutPutName() {
-        driver.get("https://seubarriga.wcaquino.me");
-        driver.findElement(By.className("dropdown-toggle")).click();
-        driver.findElement(By.linkText("Adicionar")).click();
-        driver.findElement(By.className("btn-primary")).submit();
-        Assert.assertEquals("Informe o nome da conta", driver.findElement(By.className("alert-danger")).getText());
+        addAnAccountWithNoName();
+        Assert.assertEquals("Informe o nome da conta", accountPage.getTextReturnedOnAlertDanger());
     }
 
     @Test
     public void mustShowAllAccountsOnTheSystem() {
-        driver.get("https://seubarriga.wcaquino.me");
-        driver.findElement(By.className("dropdown-toggle")).click();
-        driver.findElement(By.linkText("Listar")).click();
+        accountList = homePage.clickOnShowListOfAccounts();
+        //O que validar??
     }
 
     @Test
     public void validateMessageReturnedWhenChangeTheNameOfAnAccountSuccessfully() {
-        driver.get("https://seubarriga.wcaquino.me");
-        driver.findElement(By.className("dropdown-toggle")).click();
-        driver.findElement(By.linkText("Listar")).click();
+
+       /* accountList = homePage.clickOnShowListOfAccounts();
+
         driver.findElement(By.xpath("//*[@id=\"tabelaContas\"]/tbody/tr[1]/td[2]/a[1]/span[@class='glyphicon glyphicon-edit']")).click();
         driver.findElement(By.id("nome")).clear();
         driver.findElement(By.id("nome")).sendKeys("ALTERADO");
-        driver.findElement(By.className("btn-primary")).submit();
+        driver.findElement(By.className("btn-primary")).submit();*/
+        changeAnAccountName("ALTERADO");
         Assert.assertEquals("Conta alterada com sucesso!", driver.findElement(By.className("alert-success")).getText());
     }
 

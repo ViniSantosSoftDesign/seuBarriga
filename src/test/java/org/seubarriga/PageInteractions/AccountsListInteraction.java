@@ -8,4 +8,11 @@ public class AccountsListInteraction extends AccountsListPage {
     public AccountsListInteraction(WebDriver driver) {
         this.driver = driver;
     }
+
+    public EditAccountPageInteraction clickOnEditButton(){
+        driver.findElement(editButton).click();
+        return new EditAccountPageInteraction(driver);
+    }
+
+
 }

@@ -15,6 +15,8 @@ public class BaseTest {
     protected LoginPageInteraction loginPage;
     protected HomePageInteraction homePage;
     protected AddAccountPageInteraction accountPage;
+    protected AccountsListInteraction accountList;
+    protected EditAccountPageInteraction editAccount;
 
     @BeforeClass
     public static void setupClass() {
@@ -28,22 +30,30 @@ public class BaseTest {
         homePage = new HomePageInteraction(driver);
         loginPage = new LoginPageInteraction(driver);
         accountPage = new AddAccountPageInteraction(driver);
+        accountList = new AccountsListInteraction(driver);
+        editAccount = new EditAccountPageInteraction(driver);
 
         loginPage.setUserEmail("aguia1@aguia.com.br");
         loginPage.setUserPassword("32690305");
         homePage = loginPage.clickLoginButtonReturnsHomePageObject();
-
     }
-    public void addAnAccountWithNoName(){
+
+    public void addAnAccountWithNoName() {
         accountPage = homePage.clickOnAddButton();
-        accountPage.setName("Conta1");
         accountPage.clickOnSaveButtonToSaveAnAccount();
     }
 
-    public void addAnAccountWithName(String name){
+    public void addAnAccountWithName(String name) {
         accountPage = homePage.clickOnAddButton();
         accountPage.setName(name);
         accountPage.clickOnSaveButtonToSaveAnAccount();
+    }
+
+    public void changeAnAccountName(String name){
+        accountList = homePage.clickOnShowListOfAccounts();
+        editAccount = accountList.clickOnEditButton();
+        editAccount.clearName();
+        editAccount.setName(name);
     }
 
     /*   @After
