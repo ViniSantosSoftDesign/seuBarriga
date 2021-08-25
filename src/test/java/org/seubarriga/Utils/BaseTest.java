@@ -1,6 +1,7 @@
 package org.seubarriga.Utils;
 
 
+import org.junit.After;
 import org.openqa.selenium.WebElement;
 import org.seubarriga.PageInteractions.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -106,11 +107,12 @@ public class BaseTest {
         createFinancialPage.setDataOFpayment("26/08/2021");
         createFinancialPage.setDescription(description);
         createFinancialPage.setWhoWants("Herdeiro do Madruga");
-        createFinancialPage.setValue("1.99");
+        createFinancialPage.setValue("100");
         createFinancialPage.clickOnSaveButtonToSaveAFinancialMovement();
 
         return description;
     }
+
 
 
 
@@ -120,12 +122,12 @@ public class BaseTest {
         return createFinancialPage.getAllMessagesAlertDanger();
     }
 
-    /*   @After
-       public void teardown() {
-           if (driver != null) {
-               driver.quit();
-           }
-       }*/
+    /*@After
+    public void teardown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }*/
 
 
 }

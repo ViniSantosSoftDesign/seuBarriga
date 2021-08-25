@@ -39,12 +39,14 @@ public class TestSecondPart extends BaseTest {
         Assert.assertEquals("Movimentação adicionada com sucesso!", createFinancialPage.getTextReturnedOnAlertSuccess());
     }
 
-    @Test
+    /*@Test
     public void validateIfTheFinancialMovementeIsShownAtMonthlyFinancialSummary() {
         String description = "Sim Eu sou uma movimentação e fui cadastrada!";
+
+        createFinancialMovementToValidadeIfItShowUpAtAtMonthlyFinancialSummary(description);
         String everything = "";
 
-        driver.get("https://seubarriga.wcaquino.me");
+        *//*driver.get("https://seubarriga.wcaquino.me");
         driver.findElement(By.linkText("Criar Movimentação")).click();
 
         driver.findElement(By.id("data_transacao")).sendKeys("19/08/2021");
@@ -52,7 +54,7 @@ public class TestSecondPart extends BaseTest {
         driver.findElement(By.id("descricao")).sendKeys(description);
         driver.findElement(By.id("interessado")).sendKeys("Herdeiro do Madruga");
         driver.findElement(By.id("valor")).sendKeys("100");
-        driver.findElement(By.className("btn-primary")).submit();
+        driver.findElement(By.className("btn-primary")).submit();*//*
 
         driver.findElement(By.linkText("Resumo Mensal")).click();
 
@@ -62,6 +64,6 @@ public class TestSecondPart extends BaseTest {
             everything = everything + element.getText();
         }
         Assert.assertThat(everything, containsString(description));
-    }
+    }*/
 
 }
