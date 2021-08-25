@@ -1,7 +1,10 @@
 package org.seubarriga.PageInteractions;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.seubarriga.Pages.CreateFinancialMovementPage;
+
+import java.util.List;
 
 public class CreateFinancialMovementPageInteraction extends CreateFinancialMovementPage {
 
@@ -41,5 +44,12 @@ public class CreateFinancialMovementPageInteraction extends CreateFinancialMovem
         return driver.findElement(alertSuccessBy).getText();
     }
 
+    public List<WebElement> getAllMessagesAlertDanger(){
+
+        List<WebElement> listOfErros;
+
+        listOfErros = driver.findElements(erros);
+        return listOfErros;
+    }
 
 }

@@ -17,19 +17,12 @@ public class TestSecondPart extends BaseTest {
 
         String stringToCompare = createStringToCompareErroMessages();
 
-        createFinancialMovementBlanc();
-
-//        driver.findElement(By.linkText("Criar Movimentação")).click();
-//        driver.findElement(By.className("btn-primary")).submit();
-//        List<WebElement> erros = driver.findElements((By.xpath("//div[@class='alert alert-danger']//li")));
-
+        List<WebElement> erros = createFinancialMovementBlancAndReturnAlertErros();
 
         for (WebElement element : erros) {
             Assert.assertThat(stringToCompare, containsString(element.getText()));
         }
     }
-
-}
 
     @Test
     public void validateTheErrorMessageOfValueFieldMustBeOnlyNumbers() {

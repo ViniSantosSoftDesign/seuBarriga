@@ -1,12 +1,15 @@
 package org.seubarriga.Utils;
 
 
+import org.openqa.selenium.WebElement;
 import org.seubarriga.PageInteractions.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 public class BaseTest {
 
@@ -93,9 +96,9 @@ public class BaseTest {
         return stringToCompare;
     }
 
-    public String createFinancialMovementToValidadeIfItShowUpAtAtMonthlyFinancialSummary(String ) {
+    public String createFinancialMovementToValidadeIfItShowUpAtAtMonthlyFinancialSummary(String description ) {
 
-        String description = "Sim Eu sou uma movimentação e fui cadastrada!";
+        //String description = "Sim Eu sou uma movimentação e fui cadastrada!";
         String everything = "";
 
         createFinancialPage = homePage.clickOnCreateFinancialMovement();
@@ -111,9 +114,10 @@ public class BaseTest {
 
 
 
-    public void createFinancialMovementBlanc() {
+    public List<WebElement> createFinancialMovementBlancAndReturnAlertErros() {
         createFinancialPage = homePage.clickOnCreateFinancialMovement();
         createFinancialPage.clickOnSaveButtonToSaveAFinancialMovement();
+        return createFinancialPage.getAllMessagesAlertDanger();
     }
 
     /*   @After
